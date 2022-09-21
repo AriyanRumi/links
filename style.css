@@ -119,16 +119,7 @@ a{
     cursor: pointer;
 }
 
-.rbtn{
-    float: right;
-    outline: none;
-    border: none;
-    background-color:#2c3e50;
-    color: white;
-    padding: 6px 12px;
-    cursor: pointer;
-    margin-left: 15px;
-}
+
 .cbtn{
     margin-top: 15px;
     float: right;
@@ -220,4 +211,69 @@ a{
 
 .toggleSize{
     cursor: pointer;
+}
+
+.settingsToolbar{
+    width: 100%;
+    border: 2px solid #16a085;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 15px;
+    cursor: pointer;
+    background: transparent;
+    transition: all .1s linear;
+}
+.settingsToolbar:hover{
+    background-color: #16a085;
+}
+
+.toolbarClose{
+    width: 100%;
+    border: 2px solid #16a085;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 15px;
+    cursor: pointer;
+    background: transparent;
+    transition: all .1s linear;
+    color: white;
+}
+
+.toolbar{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #2c3e50;
+    color: white;
+    width: 400px;
+    padding: 18px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.toolbar.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toolbarWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.toolbarCommonBtn{
+    border: 2px solid #16a085;
+    padding: 6px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    background: transparent;
+    transition: all .1s linear;
+    color: white;
 }

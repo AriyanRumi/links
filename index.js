@@ -61,3 +61,24 @@ tbtn.addEventListener('click',()=>{
 dclose.addEventListener('click',()=>{
     docu.classList.remove('active')
 })
+
+// toolbar
+let settingsToolbar =document.querySelector('.settingsToolbar')
+let toolbar =document.querySelector('.toolbar')
+let toolbarClose=document.querySelector('.toolbarClose')
+
+
+
+
+settingsToolbar.addEventListener('click',()=>{
+toolbar.classList.toggle('active')
+})
+
+toolbarClose.addEventListener('click',()=>{
+    toolbar.classList.remove('active')
+})
+
+
+
+
+
