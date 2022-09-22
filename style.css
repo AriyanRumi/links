@@ -52,6 +52,7 @@ a{
     font-weight: bold;
 }
 
+
 .commonBtn:hover{
     background-color: #16a085;
     color: white;
@@ -243,7 +244,7 @@ a{
 
 .toolbar{
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #2c3e50;
@@ -253,6 +254,7 @@ a{
     opacity: 0;
     pointer-events: none;
     transition: all .3s ease-in-out;
+    overflow-y:scroll ;
 }
 
 .toolbar.active{
@@ -276,4 +278,108 @@ a{
     background: transparent;
     transition: all .1s linear;
     color: white;
+}
+
+
+.social i{
+    color:#212a33;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 12px rgba(0,0,0,0.1);
+
+}
+
+.note{
+    position: absolute;
+    right: 70px;
+    bottom: 100px;
+    text-align: center;
+}
+
+.note p{
+    font-weight: 600;
+    background-color: #212a33;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-bottom: -10px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.note button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color:palevioletred;
+    cursor: pointer;
+}
+
+.note button i{
+    font-size: 20px;
+}
+
+
+.note:hover.note p{
+   opacity: 1;
+   transition: all .3s ease-in-out;
+   margin-bottom: 10px;
+}
+
+.notepad{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    width: 350px;
+    background-color: #16a085;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.notepad.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.notepad .notedown{
+    width: 100%;
+    height: 300px;   
+    padding: 20px;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 18px;
+}
+
+.noteBtn{
+    padding: 4px 7px;
+    cursor: pointer;
+}
+
+
+.alerts{
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    background-color: green;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.alerts.active{
+    opacity: 1;
+    pointer-events: auto;
+    right: 20px;
 }
