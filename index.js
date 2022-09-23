@@ -140,13 +140,24 @@ setTimeout(()=>{
  },2000)
  })
 
-
-
-
- 
-
 let notedown =document.querySelector('.notedown')
 let getNote =localStorage.getItem('note')
 notedown.innerHTML=getNote;
+
+
+
+let aboutusBtn =document.querySelector('.aboutusBtn')
+let aboutus =document.querySelector('.aboutus')
+let closeAbout =document.querySelector('.closeAbout')
+aboutusBtn.addEventListener('click',()=>{
+    aboutus.classList.toggle('active')
+ })
+
+ 
+closeAbout.addEventListener('click',()=>{
+    aboutus.classList.remove('active')
+ })
+
+
 
 
