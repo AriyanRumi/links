@@ -294,7 +294,7 @@ a{
 }
 
 .note{
-    position: absolute;
+    position: fixed;
     right: 70px;
     bottom: 100px;
     text-align: center;
@@ -333,7 +333,7 @@ a{
 }
 
 .notepad{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
