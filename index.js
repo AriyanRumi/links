@@ -161,3 +161,12 @@ closeAbout.addEventListener('click',()=>{
 
 
 
+
+ function searchfun(){
+    var search =document.querySelector('.search').value
+    let allLinks =document.querySelectorAll('.commonBtn')
+
+    alert('Sorry! Please contact Pappu Hasan')
+
+ }
+
