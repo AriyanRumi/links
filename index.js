@@ -84,7 +84,7 @@ toolbarClose.addEventListener('click',()=>{
 let bgBtn =document.querySelector('.bgBtn')
 
 bgBtn.addEventListener('click',()=>{
-    let bgArray =['#FFF5E4','#FFE3E1','#FFD1D1','#FF9494','#937DC2','#C689C6','#E8A0BF','#748DA6','#9CB4CC','#F2D7D9','#0a3d62','#0c2461','#6a89cc','#60a3bc','#079992','#20bf6b','#4b6584','#2d98da','#eb3b5a','#2f3542','#2c3e50','#bdc3c7']
+    let bgArray =['FFF5E4','FFE3E1','FFD1D1','FF9494','937DC2','C689C6','E8A0BF','748DA6','9CB4CC','F2D7D9','#0a3d62','#0c2461','#6a89cc','#60a3bc','#079992','#20bf6b','#4b6584','#2d98da','#eb3b5a','#2f3542','#2c3e50','#bdc3c7']
     let random =Math.floor(Math.random()*21)
     let gen =bgArray[random]
    document.body.style.backgroundColor=gen
@@ -189,3 +189,23 @@ let filterCloseBtn =document.querySelector('.filterCloseBtn')
 filterCloseBtn.addEventListener('click',()=>{
     searchFilter.classList.remove('active')
 })
+
+
+
+
+// download
+
+let dl =document.querySelector('.dl')
+let dlpanel =document.querySelector('.dlpanel')
+let dlclose =document.querySelector('.dlclose')
+dl.addEventListener('click',()=>{
+    dlpanel.classList.toggle('active')
+})
+
+
+dlclose.addEventListener('click',()=>{
+    dlpanel.classList.remove('active')
+})
+
+
+
