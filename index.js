@@ -162,11 +162,30 @@ closeAbout.addEventListener('click',()=>{
 
 
 
- function searchfun(){
-    var search =document.querySelector('.search').value
-    let allLinks =document.querySelectorAll('.commonBtn')
 
-    alert('Sorry! Please contact Pappu Hasan')
 
- }
+let filterCloseBtn =document.querySelector('.filterCloseBtn')
+ let searchFilter =document.querySelector('.searchFilter')
+ function myFunction() {
+  searchFilter.classList.add('active')
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+            
+        }
+    }
+}
 
+
+filterCloseBtn.addEventListener('click',()=>{
+    searchFilter.classList.remove('active')
+})
