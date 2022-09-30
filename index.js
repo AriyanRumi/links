@@ -80,69 +80,19 @@ toolbarClose.addEventListener('click',()=>{
 
 
 
-//change bg color
-let bgBtn =document.querySelector('.bgBtn')
-
-bgBtn.addEventListener('click',()=>{
-    let bgArray =['FFF5E4','FFE3E1','FFD1D1','FF9494','937DC2','C689C6','E8A0BF','748DA6','9CB4CC','F2D7D9','#0a3d62','#0c2461','#6a89cc','#60a3bc','#079992','#20bf6b','#4b6584','#2d98da','#eb3b5a','#2f3542','#2c3e50','#bdc3c7']
-    let random =Math.floor(Math.random()*21)
-    let gen =bgArray[random]
-   document.body.style.backgroundColor=gen
-   localStorage.setItem('bg',gen)
-})
-
-let bgData =localStorage.getItem("bg");
-document.body.style.backgroundColor=bgData
-
 
 
 //note
 
 let note =document.querySelector('.note')
-let notepad =document.querySelector('.notepad')
-let closeNoteBtn =document.querySelector('.closeNoteBtn')
-let saveBtn =document.querySelector('.saveBtn')
-let alerts =document.querySelector('.alerts')
-
 
 note.addEventListener('click',()=>{
-   notepad.classList.toggle('active')
+    window.location.assign('note.html')
+
 })
 
-closeNoteBtn.addEventListener('click',()=>{
-    notepad.classList.remove('active')
- })
-
  
- saveBtn.addEventListener('click',()=>{
 
-let notedown =document.querySelector('.notedown')
-let notedownVal =notedown.value;
-localStorage.setItem('note',notedownVal)
-alerts.classList.add('active')
-setTimeout(()=>{
-    alerts.classList.remove('active')
- },2000)
-
- })
-
-
-
-let copyBtn =document.querySelector('.copyBtn')
-
-copyBtn.addEventListener('click',()=>{
-    let notedown =document.querySelector('.notedown')
-    let notedownVal =notedown.value;
-    navigator.clipboard.writeText(notedownVal)
-    alerts.classList.add('active')
-setTimeout(()=>{
-    alerts.classList.remove('active')
- },2000)
- })
-
-let notedown =document.querySelector('.notedown')
-let getNote =localStorage.getItem('note')
-notedown.innerHTML=getNote;
 
 
 
