@@ -159,3 +159,11 @@ dlclose.addEventListener('click',()=>{
 
 
 
+
+// tutorial
+
+let tutorial =document.querySelector('.tutorials')
+let tutorialss =document.querySelector('.tutorial')
+tutorial.addEventListener('click',()=>{
+    tutorialss.classList.toggle('active')
+})
